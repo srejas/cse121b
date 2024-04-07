@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | W06: Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/w01-task.html">W1 Task</a></li>
+      <li><a href="/w03-task.html">W3 Task</a></li>
+      <li><a href="/w04-task.html">W4 Task</a></li>
+      <li><a href="/w05-task.html">W5 Task</a></li>
+      <li><a href="project.html" class="active">Project</a></li>
+    </ul>
+  </nav>
+  <main id="gridly">
+    <h1>W06: Final Project</h1>
+    <h2>Yu-Gi-Oh! Card Finder</h2>
+
+    <select id="filtered" title="Choose a data filter.">
+      <option value="" disabled selected>Filter Cards</option>
+      <optgroup label="Attack">
+        <option value="1700">Less than 1700</option>
+        <option value="2500">1700-2499</option>
+        <option value="3000">2500+</option>
+      </optgroup>
+      <optgroup label="Defence">
+        <option value="1200">Less than 1200</option>
+        <option value="2300">1200-2299</option>
+        <option value="4000">2300+</option>
+      </optgroup>
+      <optgroup label="Non-monsters">
+        <option value="Spell">Spell</option>
+        <option value="Trap">Trap</option>
+      </optgroup>
+      <optgroup label="Attribute">
+        <option value="Dark">Dark</option>
+        <option value="Divine">Divine</option>
+        <option value="Earth">Earth</option>
+        <option value="Fire">Fire</option>
+        <option value="Light">Light</option>
+        <option value="Water">Water</option>
+        <option value="Wind">Wind</option>
+      </optgroup>
+      <optgroup label="Type">
+        <option value="Aqua">Aqua</option>
+        <option value="Beast">Beast</option>
+        <option value="Beast-Warrior">Beast-Warrior</option>
+        <option value="Cyberse">Cyberse</option>
+        <option value="Dinosaur">Dinosaur</option>
+        <option value="Divine-Beast">Divine-Beast</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Fairy">Fairy</option>
+        <option value="Fiend">Fiend</option>
+        <option value="Fish">Fish</option>
+        <option value="Insect">Insect</option>
+        <option value="Machine">Machine</option>
+        <option value="Plant">Plant</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Pyro">Pyro</option>
+        <option value="Reptile">Reptile</option>
+        <option value="Rock">Rock</option>
+        <option value="Sea Serpent">Sea Serpent</option>
+        <option value="Spellcaster">Spellcaster</option>
+        <option value="Thunder">Thunder</option>
+        <option value="Warrior">Warrior</option>
+        <option value="Winged Beast">Winged Beast</option>
+        <option value="Wyrm">Wyrm</option>
+        <option value="Zombie">Zombie</option>
+      </optgroup>
+      <option value="all">No Filter</option>
+    </select>
+
+    <input type="text" id="search" placeholder="Search by card name...">
+
+    <div id="cards">
+    </div>
+  </main>
+
+
+  <footer>
+    &copy;<span id="year"></span> | Week 06 - Final Project | CSE 121b
+  </footer>
+  <script src="/scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/project.js"></script>
+</body>
+
+</html>
